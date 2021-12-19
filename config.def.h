@@ -139,7 +139,7 @@ unsigned int tabspaces = 8;
 
 #if ALPHA_PATCH
 /* bg opacity */
-float alpha = 1;
+float alpha = 0.90;
 #if ALPHA_GRADIENT_PATCH
 float grad_alpha = 0.50; //alpha value that'll change
 float stat_alpha = 0.50; //constant alpha value that'll get added to grad_alpha

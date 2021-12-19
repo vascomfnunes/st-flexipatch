@@ -27,7 +27,7 @@
 /* Adds gradient transparency to st, depends on the alpha patch.
  * https://st.suckless.org/patches/gradient/
  */
-#define ALPHA_GRADIENT_PATCH 1
+#define ALPHA_GRADIENT_PATCH 0
 
 /* This patch allows st to resize to any pixel size rather than snapping to character width/height.
  * https://st.suckless.org/patches/anysize/
