@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
+static char *font = "JetbrainsMonoNL Nerd Font:pixel:size=11:antialias=true:autohint=true";
 #if FONT2_PATCH
 /* Spare fonts */
 static char *font2[] = {
@@ -139,10 +139,10 @@ unsigned int tabspaces = 8;
 
 #if ALPHA_PATCH
 /* bg opacity */
-float alpha = 0.8;
+float alpha = 1;
 #if ALPHA_GRADIENT_PATCH
-float grad_alpha = 0.54; //alpha value that'll change
-float stat_alpha = 0.46; //constant alpha value that'll get added to grad_alpha
+float grad_alpha = 0.50; //alpha value that'll change
+float stat_alpha = 0.50; //constant alpha value that'll get added to grad_alpha
 #endif // ALPHA_GRADIENT_PATCH
 #if ALPHA_FOCUS_HIGHLIGHT_PATCH
 float alphaUnfocused = 0.6;
@@ -152,34 +152,33 @@ float alphaUnfocused = 0.6;
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
+  "#32302f", /* hard contrast: #1d2021 / soft contrast: #32302f */
+  "#ea6962", /* red     */
+  "#a9b665", /* green   */
+  "#d8a657", /* yellow  */
+  "#7daea3", /* blue    */
+  "#d3869b", /* magenta */
+  "#89b482", /* cyan    */
+  "#d4be98", /* white   */
 
-	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
+  /* 8 bright colors */
+  "#928374", /* black   */
+  "#ea6962", /* red     */
+  "#a9b665", /* green   */
+  "#d8a657", /* yellow  */
+  "#7daea3", /* blue    */
+  "#d3869b", /* magenta */
+  "#89b482", /* cyan    */
+  "#d4be98", /* white   */
 
 	[255] = 0,
 
 	/* more colors can be added after 255 to use with DefaultXX */
 	"#add8e6", /* 256 -> cursor */
 	"#555555", /* 257 -> rev cursor*/
-	"#000000", /* 258 -> bg */
-	"#e5e5e5", /* 259 -> fg */
+	"#32302f", /* 258 -> bg */
+	"#d4be98", /* 259 -> fg */
 };
-
 
 /*
  * Default colors (colorname index)
